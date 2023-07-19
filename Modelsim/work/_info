@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_10.5/examples
+T_opt
+!s110 1689746606
+VC=j4HOfnHdb@VBeHf8P8N3
+Z1 04 12 4 work RAM_2Port_tb fast 0
+=1-c83dd43f0ce7-64b77cae-e6-48f0
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.5;63
+T_opt1
+!s110 1689746524
+VS^;b[B`<TBPM]?95^QLmn0
+R1
+=1-c83dd43f0ce7-64b77c5b-208-4da8
+o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt1
+R3
+R0
+vRAM_2Port
+Z4 !s110 1689746586
+!i10b 1
+!s100 SDbGCoRWEL>a?KncDQT591
+Ii`o9fa6j7HYIh40@ME<n`2
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 dD:/IEEE Digital/SPI Project/Modelsim
+w1689733714
+8D:/IEEE Digital/SPI Project/RTL/Data_Memory.v
+FD:/IEEE Digital/SPI Project/RTL/Data_Memory.v
+L0 6
+Z7 OL;L;10.5;63
+r1
+!s85 0
+31
+Z8 !s108 1689746586.000000
+!s107 D:/IEEE Digital/SPI Project/RTL/Data_Memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/IEEE Digital/SPI Project/RTL/Data_Memory.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@r@a@m_2@port
+vRAM_2Port_tb
+R4
+!i10b 1
+!s100 _A0MBe_o94bYOB3=L?Bb`1
+IVSdPNeM2oEBE:ghJV_XC82
+R5
+R6
+w1689746505
+8D:/IEEE Digital/SPI Project/RTL/Data_Memory_tb.v
+FD:/IEEE Digital/SPI Project/RTL/Data_Memory_tb.v
+L0 8
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/IEEE Digital/SPI Project/RTL/Data_Memory_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/IEEE Digital/SPI Project/RTL/Data_Memory_tb.v|
+!i113 0
+R9
+R2
+n@r@a@m_2@port_tb
