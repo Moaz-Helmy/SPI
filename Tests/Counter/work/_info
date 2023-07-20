@@ -1,0 +1,85 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/modeltech64_10.5/examples
+T_opt
+!s110 1689848651
+V8NTnXnl>ANVk286A`V9I[0
+04 10 4 work Counter_tb fast 0
+=1-c83dd43f0ce7-64b90b4a-3bc-2f58
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vCounter
+Z1 !s110 1689848635
+!i10b 1
+!s100 ?mA4A]H?m3P`:j1lg04Ja0
+In:_;>dU_kKdTm[RllF=h71
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/IEEE Digital/SPI Project/Tests/Counter
+w1689848559
+8D:/IEEE Digital/SPI Project/RTL/Counter.v
+FD:/IEEE Digital/SPI Project/RTL/Counter.v
+L0 6
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1689848635.000000
+!s107 D:/IEEE Digital/SPI Project/RTL/Counter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/IEEE Digital/SPI Project/RTL/Counter.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+n@counter
+vCounter_tb
+R1
+!i10b 1
+!s100 OT^YaI]zehhDTg52CdjgX2
+IM`=cPAn`?aXjJQTWP1QW;0
+R2
+R3
+w1689848628
+Z7 8D:/IEEE Digital/SPI Project/RTL/Counter_tb.v
+Z8 FD:/IEEE Digital/SPI Project/RTL/Counter_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 D:/IEEE Digital/SPI Project/RTL/Counter_tb.v|
+Z10 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/IEEE Digital/SPI Project/RTL/Counter_tb.v|
+!i113 0
+R6
+R0
+n@counter_tb
+vmoduleName
+!s110 1689848601
+!i10b 1
+!s100 id^[fX971UgQ=L3f7Ge>W2
+ILM?2_5?@>RkIO@O?Rj35Q0
+R2
+R3
+w1689848586
+R7
+R8
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1689848601.000000
+R9
+R10
+!i113 0
+R6
+R0
+nmodule@name
