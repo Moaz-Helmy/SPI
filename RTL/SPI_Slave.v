@@ -26,7 +26,7 @@ reg [9:0] rx_data_next;
 reg [2:0]current_state,Next_state;
 
 /*Reading and writing enable signals*/
-reg wr_en, rd_en,send_en;
+reg rd_en,send_en;
 
 /*A flag to state whether the address has been read in the prev state or not*/
 reg raddr_done,raddr_done_next;
@@ -177,15 +177,22 @@ end
 
 /***********************Output Logic*********************/
 always @(*) begin
-    counter_rst=1'b1;
-    counter_en=1'b1;
-    MISO='b0;
-    rx_valid=1'b0;
-    rx_data='b0;
-    wr_en=1'b0;
-    rd_en=1'b0;
-    raddr_done_next=raddr_done;
+    /*Default Values*/
+
+    /*Counter*/
+    counter_rst='b1;
+    counter_en='b0;
+
+    /*Enabling signals*/
+    rd_en='b0;
     send_en='b0;
+
+    /*Register values*/
+    rdata_done_next = rdata_done;
+    rdata_next = rdata_reg;
+    rx_data_next = rx_data;
+    rx_valid_next = rx_valid;
+
     case (current_state)
         IDLE: begin
             /*Assign all output signals to be zero*/
@@ -277,6 +284,7 @@ always @(*) begin
 
                         /*Keep the counter enabled*/
                         counter_en='b1;
+                        counter_rst='b1;
                     end
                 end
                 else
@@ -319,11 +327,25 @@ always @(*) begin
                 rd_en = 'b1;
             end
         end
-         
+        default:begin
+            /*Counter*/
+            counter_rst='b1;
+            counter_en='b0;
+
+            /*Enabling signals*/
+            rd_en='b0;
+            send_en='b0;
+
+            /*Register values*/
+            rdata_done_next = rdata_done;
+            rdata_next = rdata_reg;
+            rx_data_next = rx_data;
+            rx_valid_next = rx_valid;
+        end
     endcase
 end
 
-/*************************Receiving Addresses Logic*****************************/
+/*************************Receiving Data Logic*****************************/
 always @(posedge clk) begin
     if(rd_en)
     begin
@@ -346,5 +368,4 @@ always @(posedge clk) begin
         MISO<='b0;
    end
 end
-    
 endmodule
