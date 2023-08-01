@@ -52,16 +52,6 @@ Counter C1 (
     .count(count)
 );
 
-/*Data memory instance*/
-Data_Memory D1 (
-    .clk(clk),
-    .rst_n(rst_n),
-    .rx_valid(rx_valid),
-    .tx_valid(tx_valid),
-    .dout(tx_data),
-    .din(rx_data)
-);
-
 /***********************State Transition******************/
 always @(posedge clk, negedge rst_n) begin
     if(!rst_n)
