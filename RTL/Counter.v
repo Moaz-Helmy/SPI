@@ -6,23 +6,17 @@
 module Counter #(
     parameter N= 4
 ) (
-    input wire reset, enable, clk,
-    output reg [N-1:0] count,
-    output reg tenth_flag
+    input wire counter_rst, counter_en, clk,
+    output reg [N-1:0] count
 );
 
 /*Combinational output*/
 reg [N-1:0]count_comb;
 
 always @(*) begin
-    if(count == 4'b1010) begin
-        count_comb = count;
-        tenth_flag = 1'b1;
-    end
-    else if (enable)
+    if (counter_en)
     begin
         count_comb = count + 4'b0001;
-        tenth_flag = 1'b0;
     end
     else
     begin
@@ -31,8 +25,8 @@ always @(*) begin
 end
 
 /*Sequential output*/
-always @(posedge clk or negedge reset) begin
-    if(!reset)
+always @(posedge clk or negedge counter_rst) begin
+    if(!counter_rst)
     begin
         count<=4'b0000;
     end

@@ -3,21 +3,27 @@
     Description: Verilog code describing a 2-single-port synchronous RAM.
 */
 
-module RAM_2Port #(parameter MEM_DEPTH = 256, DATA_SIZE = 8, ADDR_SIZE = 8)
+module Data_Memory #(parameter MEM_DEPTH = 256, DATA_SIZE = 8, ADDR_SIZE = 8)
 (
     input wire [9:0] din,
     input wire rx_valid,
     input wire clk,
     input wire rst_n,
     output reg [7:0] dout,
-    output wire tx_valid
+    output reg tx_valid
 );
 
 /*Create the memory array*/
 reg [DATA_SIZE - 1 : 0] RAM [0 : 2**ADDR_SIZE - 1];
 
+/*Write enable signal that is used to write data in RAM*/
+reg wr_en;
+
 /*Define registers to hold the write address & read address*/
-reg [7:0]write_add, read_add;
+reg [7:0]write_add_reg, write_add_next, read_add_reg, read_add_next;
+
+/*Define register to hold the data output from the RAM*/
+reg [7:0] RAM_next;
 
 /*Define memory index*/
 integer index;
@@ -28,29 +34,75 @@ always @(posedge clk , negedge rst_n) begin
         for (index = 0 ; index< MEM_DEPTH; index=index+1 ) begin
             RAM[index]<=8'b0000_0000;
         end
-        write_add <= 8'b0000_0000;
-        read_add <= 8'b0000_0000;
+        write_add_reg <= 8'b0000_0000;
+        read_add_reg <= 8'b0000_0000;
     end
     else
     begin
-        case (din[9:8])
-            2'b00: if(rx_valid)begin
-                write_add <= din[7:0];
-            end
-            2'b01: RAM[write_add] <= din[7:0];
-            2'b10: if (rx_valid) begin
-                read_add <= din[7:0];
-            end
-            2'b11: begin
-                if (tx_valid) begin
-                    dout <= RAM[read_add];
+        if(wr_en)
+        begin
+            RAM[write_add_reg]<= RAM_next;
+        end
+        write_add_reg <= write_add_next;
+        read_add_reg <= read_add_next;
+    end
+end   
+
+/*Next State & Output logic*/
+always @(*) begin
+    write_add_next = write_add_reg;
+    read_add_next = read_add_reg;
+    wr_en = 1'b0;
+    RAM_next = 'b0;
+    tx_valid = 1'b0;
+    case (din[9:8])
+            2'b00: begin
+                if(rx_valid)
+                begin
+                    write_add_next = din[7:0];
+                end
+                else
+                begin
+                    write_add_next = write_add_reg;
                 end
             end
+            2'b01: begin
+                if(rx_valid)
+                begin
+                    RAM_next = din[7:0];
+                    wr_en = 1'b1;
+                end
+                else
+                begin
+                    wr_en = 1'b0;
+                    RAM_next = 'b0;
+                end
+            end
+            2'b10: begin 
+                if (rx_valid)
+                begin
+                    read_add_next = din[7:0];
+                end
+                else
+                begin
+                    read_add_next = read_add_reg; 
+                end
+            end
+            2'b11: begin
+                    tx_valid = 1'b1;
+            end
+            default: begin
+                write_add_next = write_add_reg;
+                read_add_next = read_add_reg;
+                wr_en = 1'b0;
+                RAM_next = 'b0;
+                tx_valid = 1'b0;
+            end
         endcase
-    end
 end
 
-/*Assign tx_valid to be high whenever the command is read,.i.e, din[9] = 1*/
-assign tx_valid = din[9];
-    
+/*Assign the output bus to hold the data stored at the read address all the time*/
+always @(*) begin
+    dout = RAM[read_add_reg];
+end
 endmodule
