@@ -1,0 +1,45 @@
+{D:/IEEE Digital/SPI Project/Tests/SPI/SPI.v} {2 {vlog -work work -vopt -stats=none {D:\IEEE Digital\SPI Project\Tests\SPI\SPI.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module Counter
+-- Compiling module Data_Memory
+-- Compiling module SPI_Slave
+** Warning: ** while parsing file included at D:\IEEE Digital\SPI Project\Tests\SPI\SPI.v(6)
+** at Data_Memory.v(6): (vlog-2275) 'Data_Memory' already exists and will be overwritten.
+-- Compiling module Data_Memory
+-- Compiling module SPI
+
+Top level modules:
+	SPI
+
+} {} {}} {D:/IEEE Digital/SPI Project/Tests/SPI/Counter.v} {1 {vlog -work work -vopt -stats=none {D:/IEEE Digital/SPI Project/Tests/SPI/Counter.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module Counter
+
+Top level modules:
+	Counter
+
+} {} {}} {D:/IEEE Digital/SPI Project/Tests/SPI/SPI_tb.v} {1 {vlog -work work -vopt -stats=none {D:\IEEE Digital\SPI Project\Tests\SPI\SPI_tb.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module SPI_tb
+
+Top level modules:
+	SPI_tb
+
+} {} {}} {D:/IEEE Digital/SPI Project/Tests/SPI/SPI_Slave.v} {1 {vlog -work work -vopt -stats=none {D:/IEEE Digital/SPI Project/Tests/SPI/SPI_Slave.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module Counter
+-- Compiling module Data_Memory
+-- Compiling module SPI_Slave
+
+Top level modules:
+	Data_Memory
+	SPI_Slave
+
+} {} {}} {D:/IEEE Digital/SPI Project/Tests/SPI/Data_Memory.v} {1 {vlog -work work -vopt -stats=none {D:/IEEE Digital/SPI Project/Tests/SPI/Data_Memory.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module Data_Memory
+
+Top level modules:
+	Data_Memory
+
+} {} {}}

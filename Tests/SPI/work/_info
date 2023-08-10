@@ -1,0 +1,130 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_10.5/examples
+T_opt
+!s110 1691626899
+V<@TOQ6^ZM<G;h]0aJNY_33
+04 6 4 work SPI_tb fast 0
+=14-c85b76a9acd7-64d42d93-1d4-a70
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+R0
+vCounter
+Z2 !s110 1691626903
+!i10b 1
+!s100 J55Tk:Fa`a8[dKK6gW?GV0
+IF4:QI81l8TjC_[R:K6=gX0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 dD:/IEEE Digital/SPI Project/Tests/SPI
+w1690899981
+8Counter.v
+FCounter.v
+L0 6
+Z5 OL;L;10.5;63
+r1
+!s85 0
+31
+Z6 !s108 1691626903.000000
+Z7 !s107 Data_Memory.v|Counter.v|D:/IEEE Digital/SPI Project/Tests/SPI/SPI_Slave.v|
+Z8 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/IEEE Digital/SPI Project/Tests/SPI/SPI_Slave.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@counter
+vData_Memory
+R2
+!i10b 1
+!s100 7egP56j;M24HQR4F`1Q8V1
+I=`[PJ9f<G@J]c@4jlP?:C3
+R3
+R4
+w1691621346
+8Data_Memory.v
+FData_Memory.v
+L0 6
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
+n@data_@memory
+vSPI
+R2
+!i10b 1
+!s100 0g;aYY1<EUhhP0K8:`ebn1
+I88DE]fl@l0HQ2QI0E_=G?2
+R3
+R4
+w1690908899
+8D:\IEEE Digital\SPI Project\Tests\SPI\SPI.v
+FD:\IEEE Digital\SPI Project\Tests\SPI\SPI.v
+L0 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 Data_Memory.v|Counter.v|SPI_Slave.v|D:\IEEE Digital\SPI Project\Tests\SPI\SPI.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\IEEE Digital\SPI Project\Tests\SPI\SPI.v|
+!i113 0
+R9
+R1
+n@s@p@i
+vSPI_Slave
+R2
+!i10b 1
+!s100 7je=1M`CP>VE6LfR[UXSJ0
+Ih66=G757Cn2;Jdlga[MBO3
+R3
+R4
+w1691626838
+8D:/IEEE Digital/SPI Project/Tests/SPI/SPI_Slave.v
+FD:/IEEE Digital/SPI Project/Tests/SPI/SPI_Slave.v
+L0 7
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
+n@s@p@i_@slave
+vSPI_tb
+R2
+!i10b 1
+!s100 =?FD@b9fYOcFCN[GR3mHk0
+IWj=nP7daThN3j_o?P`h9O2
+R3
+R4
+w1691625311
+8D:\IEEE Digital\SPI Project\Tests\SPI\SPI_tb.v
+FD:\IEEE Digital\SPI Project\Tests\SPI\SPI_tb.v
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:\IEEE Digital\SPI Project\Tests\SPI\SPI_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\IEEE Digital\SPI Project\Tests\SPI\SPI_tb.v|
+!i113 0
+R9
+R1
+n@s@p@i_tb
