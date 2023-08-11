@@ -1,8 +1,8 @@
 # SPI Communication Protocol Design
 
-  In this Project, the commonly known serial communication protocol which is the Serial Communication Protocol (SPI) has been designed using verilog HDL.
+  In this Project, the commonly known serial communication protocol which is the Serial Communication Protocol (SPI) has been designed and implemented using verilog HDL.
 
-  In order to facilitate the design process, the project was divided into the three modules listed below.
+  In order to facilitate the design process, the project was divided into the three major modules as listed below.
   1. Counter
    > - The counter role was to count the number of data bits received at the MOSI pin, so that the SPI Slave knows when to transfer the data to the Data Memory.
 
