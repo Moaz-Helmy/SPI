@@ -1,5 +1,8 @@
 # SPI Communication Protocol Design
 
+## Block Diagram
+![Diagram](https://github.com/Moaz-Helmy/SPI-Communication-Protocol/blob/master/SPI%20.jpg)
+---
   In this Project, the commonly known serial communication protocol which is the Serial Peripheral Interface (SPI) has been designed and implemented using verilog HDL.
 
   In order to facilitate the design process, the project was divided into the three major modules as listed below.
