@@ -1,6 +1,6 @@
 # SPI Communication Protocol Design
 
-  In this Project, the commonly known serial communication protocol which is the Serial Communication Protocol (SPI) has been designed and implemented using verilog HDL.
+  In this Project, the commonly known serial communication protocol which is the Serial Peripheral Interface (SPI) has been designed and implemented using verilog HDL.
 
   In order to facilitate the design process, the project was divided into the three major modules as listed below.
   1. Counter
